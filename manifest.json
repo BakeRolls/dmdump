@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+	"name": "DMDump",
+	"description": "Save all you Twitter DMs",
+	"version": "0.1",
+	"browser_action": {
+		"default_icon": "icon.png"
+	},
+	"permissions": [
+		"activeTab",
+		"https://api.twitter.com/*",
+		"https://mobile.twitter.com/messages/*"
+	],
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"content_scripts": [{
+		"run_at": "document_start",
+		"matches": ["https://mobile.twitter.com/messages/*"],
+		"js": ["content.js"]
+	}]
+}
