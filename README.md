@@ -1,4 +1,4 @@
-# DMDump
+# ![Icon](icon.png) DMDump
 
 A Chrome extension to save all you Twitter DMs.
 
