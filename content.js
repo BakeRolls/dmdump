@@ -40,9 +40,9 @@ const get_all_dms = async (ids, auth_token, csrf_token) => {
 		let dms = await get_dms(ids, auth_token, csrf_token, max_id)
 		if(all_dms === undefined) {
 			all_dms = dms.conversation_timeline
-			all_dms.entries = []
+		} else {
+			all_dms.entries.push(...dms.conversation_timeline.entries)
 		}
-		all_dms.entries.push(...dms.conversation_timeline.entries)
 		max_id = dms.conversation_timeline.min_entry_id
 		has_more = dms.conversation_timeline.status === HAS_MORE
 

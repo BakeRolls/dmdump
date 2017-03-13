@@ -10,10 +10,6 @@ A Chrome extension to save all you Twitter DMs.
 	- View progress in Chromes JS console
 - Wait for the extension to open a new tab with Twitters default JSON format
 
-## Problems
-
-- The API skips the most recent 20 messages
-
 ## Credits
 
 Icon by [Freepik](http://www.flaticon.com/free-icon/dove_347468)
